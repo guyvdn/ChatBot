@@ -11,6 +11,12 @@ builder.Services.AddMudServices();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("http://localhost:5217") });
 builder.Services.AddSingleton<ChatService>();
 
+builder.Services
+    .AddOptions<ChatCompletionsOptions>()
+    .Configure(builder.Configuration.GetSection(nameof(ChatCompletionsOptions)).Bind)
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()

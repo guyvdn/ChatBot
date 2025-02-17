@@ -4,14 +4,15 @@
 		<TargetFramework>net9.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>002d0c3c-0f29-4dbe-88e1-7808f8f31b2b</UserSecretsId>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\ChatBot.Client\ChatBot.Client.csproj" />
-		<PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
 		<PackageReference Include="Azure.Identity" Version="1.13.2" />
-		<PackageReference Include="FastEndpoints" Version="5.33.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.*" />
+		<PackageReference Include="FastEndpoints" Version="5.34.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.2" />
+		<PackageReference Include="Microsoft.Extensions.AI" Version="9.1.0-preview.1.25064.3" />
 		<PackageReference Include="Microsoft.Extensions.AI.AzureAIInference" Version="9.1.0-preview.1.25064.3" />
 	</ItemGroup>
 

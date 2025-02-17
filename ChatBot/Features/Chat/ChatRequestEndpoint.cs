@@ -10,7 +10,7 @@ public class ChatRequestEndpoint(ChatService chatService) : FastEndpoints.Endpoi
 
     public override async Task HandleAsync(ChatRequest chatRequest, CancellationToken cancellationToken)
     {
-        var response = await chatService.QueryAsync(chatRequest.Query, cancellationToken);
+        var response = await chatService.QueryWithHistoryAsync(chatRequest.Query, cancellationToken);
 
         await SendStringAsync(response, cancellation: cancellationToken);
     }
